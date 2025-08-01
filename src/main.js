@@ -96,5 +96,4 @@ form.addEventListener("submit", (e) => {
 
 	alert("Thanks! Your message has been sent.");
 	form.submit();
-	form.reset();
 });
