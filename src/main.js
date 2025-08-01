@@ -52,6 +52,7 @@ window.addEventListener(
 
 // smooth scroll
 // mobile
+/* have some issues with normal scrolling */
 // let touchStartY = 0;
 // let touchEndY = 0;
 
@@ -96,4 +97,8 @@ form.addEventListener("submit", (e) => {
 
 	alert("Thanks! Your message has been sent.");
 	form.submit();
+
+	setTimeout(() => {
+		form.reset();
+	}, 500);
 });

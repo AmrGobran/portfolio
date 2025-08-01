@@ -233,11 +233,14 @@
 					</p>
 
 					<form
-						action="https://formsubmit.co/el/nebuju"
+						data-netlify="true"
 						method="POST"
 						id="contact-form"
 						class="mt-6 space-y-4 max-w-lg w-9/10"
 					>
+						<!-- for netlify -->
+						<input type="hidden" name="form-name" value="contact" />
+
 						<input
 							type="text"
 							name="name"
@@ -261,9 +264,6 @@
 							class="w-full p-3 border border-border rounded-lg bg-input focus:outline-none focus:ring-2 placeholder:text-muted-foreground focus:ring-primary"
 							required
 						></textarea>
-
-						<!-- formSubmit -->
-						<input type="hidden" name="_captcha" value="false" />
 
 						<button
 							type="submit"
