@@ -52,25 +52,25 @@ window.addEventListener(
 
 // smooth scroll
 // mobile
-let touchStartY = 0;
-let touchEndY = 0;
+// let touchStartY = 0;
+// let touchEndY = 0;
 
-window.addEventListener("touchstart", (e) => {
-	touchStartY = e.changedTouches[0].clientY;
-});
+// window.addEventListener("touchstart", (e) => {
+// 	touchStartY = e.changedTouches[0].clientY;
+// });
 
-window.addEventListener("touchend", (e) => {
-	touchEndY = e.changedTouches[0].clientY;
-	handleSwipe();
-});
+// window.addEventListener("touchend", (e) => {
+// 	touchEndY = e.changedTouches[0].clientY;
+// 	handleSwipe();
+// });
 
-function handleSwipe() {
-	if (isScrolling) return;
-	const swipeThreshold = 50;
-	const deltaY = touchStartY - touchEndY;
-	if (deltaY > swipeThreshold) scrollToSection(currentIndex + 1);
-	if (deltaY < swipeThreshold) scrollToSection(currentIndex - 1);
-}
+// function handleSwipe() {
+// 	if (isScrolling) return;
+// 	const swipeThreshold = 50;
+// 	const deltaY = touchStartY - touchEndY;
+// 	if (deltaY > swipeThreshold) scrollToSection(currentIndex + 1);
+// 	if (deltaY < swipeThreshold) scrollToSection(currentIndex - 1);
+// }
 
 // form validation
 const form = document.getElementById("contact-form");
@@ -94,8 +94,7 @@ form.addEventListener("submit", (e) => {
 		return;
 	}
 
-	console.log(name, email, message);
-
 	alert("Thanks! Your message has been sent.");
+	form.submit();
 	form.reset();
 });
