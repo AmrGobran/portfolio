@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vite App</title>
+		<link rel="stylesheet" href="./src/style.css" />
+	</head>
+	<body class="bg-background text-foreground transition-colors duration-300">
+		<div id="app">
+			<header
+				class="h-20 border-border border-b-2 sticky top-0 left-0 right-0 bg-background overflow-hidden"
+			>
+				<!-- navigation -->
+				<nav class="container p-4 mx-auto flex items-center justify-between">
+					<!-- logo -->
+					<div class="text-4xl font-bold"><a href="/">AG</a></div>
+
+					<!-- navigation links -->
+					<ul class="flex items-center gap-4 *:font-semibold max-[500px]:text-sm">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About_me</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+
+					<!-- toggle theme btn -->
+					<button
+						id="toggle-btn"
+						class="relative group text-foreground p-1"
+						aria-label="Toggle dark mood"
+					>
+						<span id="icon"></span>
+						<span
+							class="absolute left-1/2 -translate-x-1/2 bottom-1/2 mb-2 hidden group-hover:flex rounded bg-foreground px-2 py-1 text-xs text-background whitespace-nowrap"
+						>
+							Toggle theme
+						</span>
+					</button>
+				</nav>
+			</header>
+
+			<main
+				class="min-h-[calc(100vh-80px)] container mx-auto overflow-y-scroll snap-mandatory snap-y scrollbar-hidden *:snap-start"
+			>
+				<!-- hero -->
+				<section
+					id="home"
+					class="section h-section flex flex-col justify-center items-center px-6 bg-background transition-colors duration-300"
+				>
+					<p class="text-sm uppercase tracking-widest text-gray mb-4">
+						Crafting Code. Designing Experiences.
+					</p>
+
+					<h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-6 max-w-3xl">
+						<div>
+							Hi, I'm
+							<span class="text-3xl sm:text-4xl md:text-5xl text-gray dark:text-slate-400"
+								>Amr</span
+							>
+							—
+						</div>
+						a Web Developer building fast, responsive, and modern web experiences.
+					</h1>
+
+					<p class="text-base sm:text-lg text-gray mb-8 max-w-3xl">
+						I specialize in creating elegant front-end interfaces and bringing ideas to life with
+						clean, scalable code. Whether it's a landing page or a full-stack app, I love turning
+						vision into reality through the browser.
+					</p>
+
+					<div class="flex gap-4 *:font-medium *:text-gray">
+						<a
+							href="#projects"
+							class="!text-blue-500 font-semibold hover:!text-blue-700 dark:!text-blue-400"
+						>
+							[<span class="mx-1">View_Projects</span>]
+						</a>
+						<a
+							href="#contact"
+							class="!text-blue-500 font-semibold hover:!text-blue-700 dark:!text-blue-400"
+						>
+							[<span class="mx-1">Contact_Me</span>]
+						</a>
+					</div>
+				</section>
+
+				<!-- about -->
+				<section
+					id="about"
+					class="section h-section flex flex-col justify-center items-center px-6 bg-background transition-colors duration-300"
+				>
+					<div class="max-w-3xl mx-auto">
+						<h2 class="text-3xl sm:text-4xl font-bold mb-6 text-foreground text-center">
+							About Me
+						</h2>
+
+						<p class="text-base sm:text-lg mb-4">
+							I'm
+							<span class="font-semibold text-gray dark:text-slate-400">Amr Gobran</span>, a web
+							developer passionate about turning ideas into interactive, user-focused websites and
+							apps. I enjoy building clean, fast, and accessible digital experiences that are both
+							beautiful and functional.
+						</p>
+
+						<p class="text-base sm:text-lg mb-4">
+							With a strong foundation in HTML, CSS, JavaScript, and modern tools like TailwindCSS
+							and Vite, I specialize in front-end development and enjoy bringing designs to life
+							with precision and performance in mind.
+						</p>
+
+						<p class="text-base sm:text-lg">
+							Beyond coding, I love exploring design, learning new tools, and crafting things that
+							feel thoughtful and intentional.
+						</p>
+					</div>
+
+					<!-- skills -->
+					<section id="skills" class="py-16">
+						<div class="max-w-3xl mx-auto px-4 text-center">
+							<h2 class="text-3xl font-bold mb-6">Tech Stack</h2>
+							<p class="text-gray mb-8">I build fast, responsive web apps using modern tools.</p>
+							<div
+								class="flex flex-wrap justify-center gap-4 text-sm font-medium text-gray-700 dark:text-neutral-200"
+							>
+								<span class="px-3 py-1 bg-orange-600 text-white rounded-full">HTML5</span>
+								<span class="px-3 py-1 bg-blue-600 text-white rounded-full">CSS3</span>
+								<span class="px-3 py-1 bg-yellow-500 text-black rounded-full">JavaScript</span>
+								<span class="px-3 py-1 bg-violet-500 text-white rounded-full">React</span>
+								<span class="px-3 py-1 bg-blue-400 text-white rounded-full">Tailwind CSS</span>
+								<span class="px-3 py-1 bg-black text-white border border-border rounded-full"
+									>Next.js</span
+								>
+								<span
+									class="px-3 py-1 bg-gradient-to-r from-[#41D1FF] via-[#BD34FE] to-[#FFEA00] text-white rounded-full"
+									>Vite</span
+								>
+								<!-- Add more as needed -->
+							</div>
+						</div>
+					</section>
+				</section>
+
+				<!-- projects -->
+				<section
+					id="projects"
+					class="section h-section flex flex-col justify-center items-center px-6 bg-background transition-colors duration-300"
+				>
+					<div class="max-w-5xl mx-auto text-center text-gray">
+						<h2 class="text-4xl font-bold text-foreground mb-4">Projects</h2>
+						<p class="mb-12">Here are some of the projects I've built recently.</p>
+
+						<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+							<!-- project card -->
+							<div
+								class="bg-background border border-border rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2"
+							>
+								<img src="/images/tosta-sc.png" alt="Project 1" class="w-full h-48 object-cover" />
+								<div class="p-6">
+									<h3 class="text-xl font-semibold text-foreground">Tosta – Coffee Shop Website</h3>
+									<p class="ext-sm mt-2 text-left">
+										A stylish, multi-page coffee shop website built with React and Tailwind CSS.
+										Showcases the brand, menu, and contact form with no backend needed.
+									</p>
+									<div class="flex items-center justify-center gap-3 *:m-0 *:p-0 mt-3">
+										<a
+											href="https://github.com/AmrGobran/tosta"
+											target="_blank"
+											class="mt-4 text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
+										>
+											<span>GitHub</span>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												class="icon icon-tabler icons-tabler-outline icon-tabler-external-link size-4"
+											>
+												<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+												<path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+												<path d="M11 13l9 -9" />
+												<path d="M15 4h5v5" /></svg
+										></a>
+										<span class="w-0.5 h-6 bg-gray"></span>
+										<a
+											href="https://amrgobran.github.io/tosta/"
+											target="_blank"
+											class="mt-4 text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
+										>
+											<span>Live_site</span>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												class="icon icon-tabler icons-tabler-outline icon-tabler-external-link size-4"
+											>
+												<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+												<path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+												<path d="M11 13l9 -9" />
+												<path d="M15 4h5v5" />
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<!-- project cards goes here -->
+						</div>
+					</div>
+				</section>
+
+				<!-- contact -->
+				<section
+					id="contact"
+					class="section h-section flex flex-col justify-center items-center px-6 bg-background transition-colors duration-300"
+				>
+					<h2 class="text-3xl font-bold mb-4">Let’s Connect</h2>
+					<p class="text-gray max-w-8/10 md:max-w-6/10 lg:max-w-4/10">
+						Whether you have a question, a project idea, or just want to say hi — my inbox is always
+						open.
+					</p>
+
+					<form
+						action="https://formsubmit.co/el/nebuju"
+						method="POST"
+						id="contact-form"
+						class="mt-6 space-y-4 max-w-lg w-9/10"
+					>
+						<input
+							type="text"
+							name="name"
+							placeholder="Your Name"
+							class="w-full p-3 border border-border rounded-lg bg-input focus:outline-none focus:ring-2 placeholder:text-muted-foreground focus:ring-primary"
+							required
+						/>
+
+						<input
+							type="email"
+							name="email"
+							placeholder="Your Email"
+							class="w-full p-3 border border-border rounded-lg bg-input focus:outline-none focus:ring-2 placeholder:text-muted-foreground focus:ring-primary"
+							required
+						/>
+
+						<textarea
+							name="message"
+							rows="5"
+							placeholder="Your Message"
+							class="w-full p-3 border border-border rounded-lg bg-input focus:outline-none focus:ring-2 placeholder:text-muted-foreground focus:ring-primary"
+							required
+						></textarea>
+
+						<!-- formSubmit -->
+						<input type="hidden" name="_captcha" value="false" />
+
+						<button
+							type="submit"
+							class="bg-accent text-accent-foreground px-6 py-3 rounded-lg hover:bg-primary transition-colors"
+						>
+							Send Message
+						</button>
+					</form>
+				</section>
+			</main>
+
+			<!-- footer -->
+			<footer class="section text-center text-sm text-gray py-6 border-t border-border">
+				<p>© 2025 Amr Gobran. All rights reserved.</p>
+			</footer>
+		</div>
+		<script type="module" src="/src/main.js"></script>
+	</body>
+</html>
